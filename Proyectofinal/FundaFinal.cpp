@@ -15,10 +15,10 @@ struct costoPorArticulo
 };
 
 
-void datos (costoPorArticulo cant[], int n)
+void datos (costoPorArticulo cant[], int n) //Funcion para incorporar los datos al array
 {
     string art;
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < n; i++) //for para iterar dependiendo a cada articulo diferente
     {
         cout << "Digite el nombre del articulo: " << endl;
         getline(cin, art, '\n');
@@ -32,7 +32,7 @@ void datos (costoPorArticulo cant[], int n)
     }
     
 }
-float costo(costoPorArticulo cant[], int n)
+float costo(costoPorArticulo cant[], int n) //Funcion para calcular dependeindo de cuantos mismos articulos lleva
 {
    for (int i = 0; i < n; i++)
     {
@@ -40,18 +40,18 @@ float costo(costoPorArticulo cant[], int n)
     }
   
 }
-void mostrar(costoPorArticulo cant[], int n)
+void mostrar(costoPorArticulo cant[], int n) //Funcion para mostrar los datos del array segun los datos ingresados
 {
     cout << "Usted lleva la cantidad de " << n << " productos difentes" << endl;
     for (int i = 0; i < n; i++)
     {
-        cout << "Usted lleva: " << cant[i].cantidad <<  cant[i].nombreArticul << endl;
+        cout << "Usted lleva: " << cant[i].cantidad << " " <<  cant[i].nombreArticul << endl;
         cout << "Con un costo por articulo de: " << cant[i].costoPorArticulo << endl;
-        //Montrar los datos
+       
     }
     
 }
-float total(costoPorArticulo cant[], int n)
+float total(costoPorArticulo cant[], int n) //Funcion que calcula el total ya de TODOS los prodcutos
 {
     float total;
     total = 0;
@@ -63,7 +63,7 @@ float total(costoPorArticulo cant[], int n)
     return total; //Retorna el valor del total
 }
 
-int main ()
+int main () //Llamado de  las funciones
 {
     int n; 
     cout << "Bienvenido a nuestra tienda" << endl;
